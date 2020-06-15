@@ -1,0 +1,64 @@
+@charset "utf-8";
+
+p {
+    color: #fff;
+    font-size: 5rem;
+    font-family: 'Lato', sans-serif;
+}
+.container {
+    display: flex;
+}
+
+.bloque {
+    width: 20%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    clip-path: inset(0);
+    border: 2px solid #fff;
+        &:before {
+            content: '';
+            position: absolute;
+            width: 20%;
+            height: 100%;
+            background-color: #fff;
+            opacity: 0.1;
+            transform: skew(30deg);
+            transition: transform 0.3s ;
+            transition-timing-function: cubic-bezier(0,.98,.73,.91);
+        }
+        
+}
+
+/*¿Podría anidarlo dentro de bloque?*/
+.bloque:hover:before {
+    transform: none;
+    transition: transform 0.3s ;
+    transition-timing-function: cubic-bezier(0,.78,.54,.89);
+    
+}
+
+#one {
+    background-color: #244F75;
+}
+
+#two {
+    background-color: #60BFBF;
+}
+
+#three {
+    background-color: #8C4B7E;
+}
+
+#four {
+    background-color: #F8BB44;
+}
+
+#five {
+    background-color: #F24B4B;
+}
+
+.heart {
+    margin: 15px;
+}
